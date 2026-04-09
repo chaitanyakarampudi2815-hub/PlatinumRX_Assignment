@@ -1,0 +1,34 @@
+function CHECKDAY(created_at, closed_at) {
+  if (!created_at || !closed_at) return "";
+
+  var c1 = new Date(created_at);
+  var c2 = new Date(closed_at);
+
+  if (
+    c1.getFullYear() === c2.getFullYear() &&
+    c1.getMonth() === c2.getMonth() &&
+    c1.getDate() === c2.getDate()
+  ) {
+    return "Yes";
+  } else {
+    return "No";
+  }
+}
+
+function CHECKHOUR(created_at, closed_at) {
+  if (!created_at || !closed_at) return "";
+
+  var c1 = new Date(created_at);
+  var c2 = new Date(closed_at);
+
+  if (
+    c1.getFullYear() === c2.getFullYear() &&
+    c1.getMonth() === c2.getMonth() &&
+    c1.getDate() === c2.getDate() &&
+    c1.getHours() === c2.getHours()
+  ) {
+    return "Yes";
+  } else {
+    return "No";
+  }
+}
